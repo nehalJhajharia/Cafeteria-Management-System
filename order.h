@@ -96,7 +96,9 @@ void orderBill()
 
     struct Order *orderTemp = orderHead;
     struct Menu *menuTemp = menuHead;
-    printf("\n\t%s\n", orderTemp->name);
+    printf("--------------------------------\n");
+    printf("          %10s\n", orderTemp->name);
+    printf("--------------------------------\n");
     int i = 0;
     while (orderTemp->order[i] > 0)
     {
@@ -104,12 +106,12 @@ void orderBill()
         {
             menuTemp = menuTemp->next;
         }
-        printf("%10s      %6.2f\n", menuTemp->bev, menuTemp->price);
+        printf("%15s      $%.2f\n", menuTemp->bev, menuTemp->price);
         i++;
         menuTemp = menuHead;
     }
     printf("--------------------------------\n");
     char string[10] = "Total";
-    printf("%10s      %6.2f\n", string, orderTemp->total);
+    printf("%15s      $%.2f\n", string, orderTemp->total);
     printf("--------------------------------\n");
 }

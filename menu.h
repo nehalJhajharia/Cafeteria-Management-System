@@ -4,7 +4,7 @@
 struct Menu
 {
     int index;
-    char bev[25];
+    char bev[15];
     float price;
     struct Menu *next;
 };
@@ -25,7 +25,7 @@ void menuDisplay()
 
     while (temp != NULL)
     {
-        printf("%2d   $%6.2f   %10s\n",temp->index, temp->price, temp->bev);
+        printf("%3d. %15s        $%.2f\n",temp->index, temp->bev, temp->price);
         temp = temp->next;
     }
 }

@@ -14,7 +14,7 @@ int main()
 {
     char key = '0';
     char key2 = '0';
-    char string[25] = "\0";
+    char string[15] = "\0";
     int array[10] = {0};
     float price = 0;
     int temp = 0;
